@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="PrimeFit Sports & Fitness Center" />
+  <meta name="description" content="Train, play and perform with premium football field bookings, gym membership, personal training and online payment support." />
+  <meta property="og:title" content="PrimeFit Sports & Fitness Center" />
+  <meta property="og:description" content="Book football sessions, join our gym membership plans, manage payments and stay fit with professional trainers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Urban-Soccer-Park-YMCA-Houston-Safeshell.jpg" />
+  <meta property="og:url" content="https://primefit.example.com" />
+  <title>PrimeFit Sports & Fitness Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p>Loading PrimeFit...</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PrimeFit</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a href="booking.html">Field Booking</a>
+        <a href="membership.html">Membership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="button button-secondary" href="admin.html">Admin</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Sports & Fitness Center</span>
+          <h1>Train. Play. Perform.</h1>
+          <p>Book football sessions, register for gym membership and manage your fitness journey online.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="booking.html">Book Football Field</a>
+            <a class="button button-outline" href="membership.html">Join Gym</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <strong>Premium Turf</strong>
+              <p>Professional football field and gym facilities.</p>
+            </div>
+            <div>
+              <strong>Fast Booking</strong>
+              <p>Instant field availability and secure checkout.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section about" id="aboutPreview">
+      <div class="container section-heading">
+        <span class="eyebrow">Why PrimeFit</span>
+        <h2>Premium football and fitness solutions that move with your schedule.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card">
+          <h3>Football Field Rental</h3>
+          <p>Secure your slot on professional turf with fast online booking and clear pricing.</p>
+          <a class="button button-secondary" href="booking.html">Reserve Now</a>
+        </article>
+        <article class="glass-card">
+          <h3>Gym Membership</h3>
+          <p>Choose the right plan, register online and stay consistent with premium gym access.</p>
+          <a class="button button-secondary" href="membership.html">View Plans</a>
+        </article>
+        <article class="glass-card">
+          <h3>Personal Training</h3>
+          <p>Work with experienced trainers, follow nutrition support and reach your goals faster.</p>
+          <a class="button button-secondary" href="contact.html">Contact Coach</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#home">PrimeFit</a>
+        <p>Sports and fitness center delivering premium bookings, memberships and training programs.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#plans">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>Football Field Rental</li>
+          <li>Gym Membership</li>
+          <li>Personal Training</li>
+          <li>Fitness Programs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-credit">© 2026 PrimeFit Sports & Fitness Center. All rights reserved.</div>
+  </footer>
+
+  <div class="modal-overlay" id="paymentModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close payment modal">×</button>
+      <h3 id="modalTitle">Payment Integration</h3>
+      <p>Simulated payment setup for Paystack and Flutterwave readiness.</p>
+      <form id="paymentForm">
+        <label>Amount
+          <input type="number" id="paymentAmount" min="1000" value="15000" required />
+        </label>
+        <label>Email
+          <input type="email" id="paymentEmail" required placeholder="customer@example.com" />
+        </label>
+        <label>Payment Method
+          <select id="paymentMethod" required>
+            <option value="paystack">Paystack</option>
+            <option value="flutterwave">Flutterwave</option>
+          </select>
+        </label>
+        <button type="submit" class="button button-primary">Complete Payment</button>
+      </form>
+      <div class="payment-result" id="paymentResult" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

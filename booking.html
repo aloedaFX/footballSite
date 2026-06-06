@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Football Field Booking | PrimeFit" />
+  <meta name="description" content="Reserve your football field slot and manage bookings with seamless online payments." />
+  <meta property="og:title" content="PrimeFit Field Booking" />
+  <meta property="og:description" content="Reserve football sessions, confirm bookings and complete payments at PrimeFit." />
+  <title>Field Booking - PrimeFit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PrimeFit</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html" aria-current="page">Field Booking</a>
+        <a href="membership.html">Membership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="button button-secondary" href="admin.html">Admin</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section booking" id="bookingPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Field Booking</span>
+        <h2>Reserve your football slot in seconds.</h2>
+      </div>
+      <div class="booking-grid">
+        <div class="schedule-panel glass-card">
+          <div class="panel-header">
+            <h3>Schedule</h3>
+            <label>
+              Select Date
+              <input type="date" id="bookingDate" aria-label="Select booking date" />
+            </label>
+          </div>
+          <div class="schedule-list" id="scheduleList" aria-live="polite"></div>
+          <div class="legend">
+            <span><span class="status-dot available"></span> Available</span>
+            <span><span class="status-dot booked"></span> Booked</span>
+          </div>
+        </div>
+        <form class="booking-form glass-card" id="bookingForm">
+          <h3>Book Your Field</h3>
+          <div class="form-grid">
+            <label>Full Name<input type="text" id="bookName" required placeholder="John Doe" /></label>
+            <label>Phone Number<input type="tel" id="bookPhone" required placeholder="08012345678" /></label>
+            <label>Email<input type="email" id="bookEmail" required placeholder="john@example.com" /></label>
+            <label>Date<input type="date" id="bookDate" required /></label>
+            <label>Time Slot
+              <select id="bookSlot" required>
+                <option value="8AM-10AM">8AM-10AM</option>
+                <option value="10AM-12PM">10AM-12PM</option>
+                <option value="12PM-2PM">12PM-2PM</option>
+                <option value="2PM-4PM">2PM-4PM</option>
+              </select>
+            </label>
+            <label>Duration
+              <select id="bookDuration" required>
+                <option value="2">2 Hours</option>
+                <option value="4">4 Hours</option>
+              </select>
+            </label>
+          </div>
+          <div class="price-summary">
+            <p>Total Price</p>
+            <strong id="bookingTotal">₦15,000</strong>
+          </div>
+          <button type="submit" class="button button-primary">Proceed to Payment</button>
+          <p class="helper-text">Our booking system stores information locally for demo purposes; payments are simulated.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section payments" id="paymentSupport">
+      <div class="container section-heading">
+        <span class="eyebrow">Payment</span>
+        <h2>Ready for Paystack and Flutterwave integration.</h2>
+      </div>
+      <div class="payment-grid glass-card">
+        <div>
+          <h3>Simulated payment ready</h3>
+          <p>Use the payment modal to preview the checkout flow. Backend integration can be added later with Paystack and Flutterwave.</p>
+        </div>
+        <button class="button button-primary" id="openPaymentModal">Open Payment Modal</button>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="paymentModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="closeModal" aria-label="Close payment modal">×</button>
+        <h3 id="modalTitle">Payment Integration</h3>
+        <p>Simulated payment setup for Paystack and Flutterwave readiness.</p>
+        <form id="paymentForm">
+          <label>Amount
+            <input type="number" id="paymentAmount" min="1000" value="15000" required />
+          </label>
+          <label>Email
+            <input type="email" id="paymentEmail" required placeholder="customer@example.com" />
+          </label>
+          <label>Payment Method
+            <select id="paymentMethod" required>
+              <option value="paystack">Paystack</option>
+              <option value="flutterwave">Flutterwave</option>
+            </select>
+          </label>
+          <button type="submit" class="button button-primary">Complete Payment</button>
+        </form>
+        <div class="payment-result" id="paymentResult" aria-live="polite"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PrimeFit</a>
+        <p>Sports and fitness center delivering premium bookings, memberships and training programs.</p>
+      </div>
+    </div>
+    <div class="site-credit">© 2026 PrimeFit Sports & Fitness Center.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

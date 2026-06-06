@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Gallery | PrimeFit" />
+  <meta name="description" content="Browse PrimeFit's football, gym and events gallery." />
+  <meta property="og:title" content="PrimeFit Gallery" />
+  <meta property="og:description" content="View photos from our football turf, gym and fitness events." />
+  <title>Gallery - PrimeFit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PrimeFit</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Field Booking</a>
+        <a href="membership.html">Membership</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="button button-secondary" href="admin.html">Admin</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section gallery" id="galleryPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Gallery</span>
+        <h2>Browse our football, gym and event spaces.</h2>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="football">Football</button>
+        <button class="filter-button" data-filter="gym">Gym</button>
+        <button class="filter-button" data-filter="events">Events</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <article class="gallery-card" data-category="football" data-image="private-backyard-mini-soccer-pitch-for-home-recreation.jpg">
+          <img src="private-backyard-mini-soccer-pitch-for-home-recreation.jpg" alt="Football players on turf" />
+          <div class="gallery-caption">Football Action</div>
+        </article>
+        <article class="gallery-card" data-category="gym" data-image="view-rows-dumbbells.jpg">
+          <img src="view-rows-dumbbells.jpg" alt="Modern gym equipment" />
+          <div class="gallery-caption">Gym Equipment</div>
+        </article>
+        <article class="gallery-card" data-category="events" data-image="gym-with-indoor-cycling-equipment.jpg">
+          <img src="gym-with-indoor-cycling-equipment.jpg" alt="Fitness event" />
+          <div class="gallery-caption">Training Event</div>
+        </article>
+        <article class="gallery-card" data-category="football" data-image="360_F_1859701998_mg3EN6lfJbG46RGyiHiN5CAxvXmoCtgs.jpg">
+          <img src="360_F_1859701998_mg3EN6lfJbG46RGyiHiN5CAxvXmoCtgs.jpg" alt="Night football match" />
+          <div class="gallery-caption">Stadium Turf</div>
+        </article>
+        <article class="gallery-card" data-category="gym" data-image="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Personal training session" />
+          <div class="gallery-caption">Personal Training</div>
+        </article>
+        <article class="gallery-card" data-category="events" data-image="HIIT-Fitness-Event-March-2016-BellaNaija0002.jpg">
+          <img src="HIIT-Fitness-Event-March-2016-BellaNaija0002.jpg" alt="Fitness event crowd" />
+          <div class="gallery-caption">Club Events</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonialsPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What our members say about PrimeFit.</h2>
+      </div>
+      <div class="testimonial-carousel glass-card">
+        <button class="carousel-nav prev" id="prevTestimonial" aria-label="Previous testimonial">‹</button>
+        <div class="testimonial-card" id="testimonialCard"></div>
+        <button class="carousel-nav next" id="nextTestimonial" aria-label="Next testimonial">›</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PrimeFit</a>
+        <p>Sports and fitness center delivering premium bookings, memberships and training programs.</p>
+      </div>
+    </div>
+    <div class="site-credit">© 2026 PrimeFit Sports & Fitness Center.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

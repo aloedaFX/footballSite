@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Gym Membership Plans | PrimeFit" />
+  <meta name="description" content="Choose your gym membership plan and register online at PrimeFit." />
+  <meta property="og:title" content="PrimeFit Membership" />
+  <meta property="og:description" content="Explore gym membership plans, join now and manage subscription pricing." />
+  <title>Membership - PrimeFit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PrimeFit</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Field Booking</a>
+        <a href="membership.html" aria-current="page">Membership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="button button-secondary" href="admin.html">Admin</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section memberships" id="membershipPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Gym Membership</span>
+        <h2>Choose the plan that matches your fitness goals.</h2>
+      </div>
+      <div class="plans-grid">
+        <article class="plan-card glass-card">
+          <span class="plan-label">Basic</span>
+          <strong class="plan-price">₦15,000<span>/month</span></strong>
+          <ul>
+            <li>Gym Access</li>
+            <li>Locker Access</li>
+          </ul>
+          <button class="button button-outline plan-select" data-plan="Basic">Join Now</button>
+        </article>
+        <article class="plan-card glass-card recommended">
+          <span class="plan-label">Standard</span>
+          <strong class="plan-price">₦25,000<span>/month</span></strong>
+          <ul>
+            <li>Gym Access</li>
+            <li>Locker</li>
+            <li>Trainer Support</li>
+          </ul>
+          <button class="button button-primary plan-select" data-plan="Standard">Join Now</button>
+        </article>
+        <article class="plan-card glass-card">
+          <span class="plan-label">Premium</span>
+          <strong class="plan-price">₦40,000<span>/month</span></strong>
+          <ul>
+            <li>Full Access</li>
+            <li>Personal Trainer</li>
+            <li>Nutrition Plan</li>
+          </ul>
+          <button class="button button-outline plan-select" data-plan="Premium">Join Now</button>
+        </article>
+      </div>
+      <div class="registration-panel glass-card">
+        <h3>Gym Registration</h3>
+        <form id="membershipForm">
+          <div class="form-grid">
+            <label>Full Name<input type="text" id="memberName" required placeholder="Jane Doe" /></label>
+            <label>Email<input type="email" id="memberEmail" required placeholder="jane@example.com" /></label>
+            <label>Phone Number<input type="tel" id="memberPhone" required placeholder="08098765432" /></label>
+            <label>Gender
+              <select id="memberGender" required>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label>Date of Birth<input type="date" id="memberDob" required /></label>
+            <label>Membership Plan
+              <select id="memberPlan" required>
+                <option value="Basic">Basic</option>
+                <option value="Standard">Standard</option>
+                <option value="Premium">Premium</option>
+              </select>
+            </label>
+          </div>
+          <div class="subscription-panel">
+            <label>Subscription Length
+              <select id="subscriptionLength">
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly (10% off)</option>
+                <option value="yearly">Yearly (20% off)</option>
+              </select>
+            </label>
+            <div class="price-summary">
+              <p>Final Subscription Amount</p>
+              <strong id="subscriptionTotal">₦15,000</strong>
+            </div>
+          </div>
+          <button type="submit" class="button button-primary">Register Now</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PrimeFit</a>
+        <p>Sports and fitness center delivering premium bookings, memberships and training programs.</p>
+      </div>
+    </div>
+    <div class="site-credit">© 2026 PrimeFit Sports & Fitness Center.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

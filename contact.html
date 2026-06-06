@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Contact PrimeFit" />
+  <meta name="description" content="Get in touch with PrimeFit for bookings, membership and support." />
+  <meta property="og:title" content="Contact PrimeFit" />
+  <meta property="og:description" content="Contact PrimeFit for football field bookings, gym membership and fitness support." />
+  <title>Contact - PrimeFit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PrimeFit</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Field Booking</a>
+        <a href="membership.html">Membership</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="button button-secondary" href="admin.html">Admin</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contact" id="contactPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Contact</span>
+        <h2>Reach out for bookings and membership support.</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info glass-card">
+          <h3>Get in touch</h3>
+          <p>Our team is ready to help you reserve the field, join the gym or customize a training program.</p>
+          <ul>
+            <li><strong>Email:</strong> info@primefit.com</li>
+            <li><strong>Phone:</strong> +234 801 234 5678</li>
+            <li><strong>WhatsApp:</strong> +234 801 234 5678</li>
+          </ul>
+          <div class="contact-actions">
+            <a class="button button-outline" href="https://wa.me/2348012345678" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="button button-primary" href="tel:+2348012345678">Call Now</a>
+          </div>
+        </div>
+        <form class="contact-form glass-card" id="contactForm">
+          <label>Name<input type="text" id="contactName" required placeholder="Your full name" /></label>
+          <label>Email<input type="email" id="contactEmail" required placeholder="you@example.com" /></label>
+          <label>Phone<input type="tel" id="contactPhone" required placeholder="08012345678" /></label>
+          <label>Message<textarea id="contactMessage" rows="5" required placeholder="How can we help?"></textarea></label>
+          <button type="submit" class="button button-primary">Send Message</button>
+          <p class="helper-text">This contact form is ready for backend integration.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section location" id="locationPage">
+      <div class="container section-heading">
+        <span class="eyebrow">Location</span>
+        <h2>Find us and head straight to the field.</h2>
+      </div>
+      <div class="map-panel glass-card">
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps?q=hzBkn2imkAYZ3qxk9&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PrimeFit location map"></iframe>
+        </div>
+        <div class="map-actions">
+          <a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&destination=hzBkn2imkAYZ3qxk9" target="_blank" rel="noreferrer">Directions</a>
+          <a class="button button-primary" href="https://maps.app.goo.gl/hzBkn2imkAYZ3qxk9" target="_blank" rel="noreferrer">Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">PrimeFit</a>
+        <p>Sports and fitness center delivering premium bookings, memberships and training programs.</p>
+      </div>
+    </div>
+    <div class="site-credit">© 2026 PrimeFit Sports & Fitness Center.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
